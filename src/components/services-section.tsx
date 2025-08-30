@@ -11,18 +11,18 @@ const ServicesSection = () => {
     };
 
     return (
-        <section className="py-[100px] px-[30px] bg-black text-white">
-            <main className="flex flex-col gap-[28px]">
-                <p className="text-[22px]">Our Services</p>
+        <section className="sec-p bg-black text-white">
+            <main className="flex flex-col gap-7">
+                <p className="text-xl">Our Services</p>
                 <div>
                     <div>
                         {SERVICES.map((service, i) => (
-                            <article className="space-y-[25px]" key={i}>
+                            <article className="space-y-6" key={i}>
                                 <div
                                     className="flex justify-between items-start cursor-pointer"
                                     onClick={() => handleToggle(i)}
                                 >
-                                    <h1 className="font-medium text-[40px] leading-[60px]">
+                                    <h1 className="font-medium text-3xl leading-12">
                                         {service.title}
                                     </h1>
                                     <figure
@@ -40,7 +40,7 @@ const ServicesSection = () => {
                                     </figure>
                                 </div>
                                 <div
-                                    className={`h-[1px] bg-white/50 mb-[25px] transition-colors duration-300 ${
+                                    className={`h-[1px] bg-white/50 mb-6 transition-colors duration-300 ${
                                         openIndex === i
                                             ? "bg-white/50"
                                             : "bg-white/30"
@@ -53,11 +53,11 @@ const ServicesSection = () => {
                                             : "max-h-0 opacity-0"
                                     }`}
                                 >
-                                    <div className="space-y-[25px] py-2">
-                                        <p className="text-[28px] leading-[48px] text-white/70">
+                                    <div className="space-y-6 py-2">
+                                        <p className="leading-8 text-white/70">
                                             {service.description}
                                         </p>
-                                        <div className="h-[1px] bg-white/50 mb-[25px]"></div>
+                                        <div className="h-[1px] bg-white/50 mb-6"></div>
                                     </div>
                                 </div>
                             </article>
