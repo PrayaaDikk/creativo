@@ -222,42 +222,6 @@ The navigation system automatically:
 ### Other Platforms
 The project is compatible with any hosting platform that supports Node.js applications.
 
-## 📝 Scripts
-
-```json
-{
-  "dev": "next dev",           // Development server
-  "build": "next build",       // Production build
-  "start": "next start",       // Production server
-  "lint": "next lint"          // Code linting
-}
-```
-
-## 🤝 Contributing
-
-1. Fork the repository
-2. Create a feature branch (`git checkout -b feature/amazing-feature`)
-3. Commit your changes (`git commit -m 'Add amazing feature'`)
-4. Push to the branch (`git push origin feature/amazing-feature`)
-5. Open a Pull Request
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## 👨‍💻 Author
-
-**Fadil Prayadika**
-- Website: [creativo.com](https://creativo.com)
-- Email: hello@creativo.com
-- Phone: +1-800-123 4567
-
-## 🙏 Acknowledgments
-
-- Next.js team for the amazing framework
-- Tailwind CSS for the utility-first CSS framework
-- The open-source community for inspiration and tools
-
 ---
 
-**Creativo** - Where Design Meets Innovation! 🚀✨
+**Author** - Fadil Prayadika
