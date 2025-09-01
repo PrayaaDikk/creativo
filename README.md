@@ -1,36 +1,263 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🎨 Creativo - Design & Innovation Agency
 
-## Getting Started
+A modern, responsive website for a creative design agency built with Next.js, TypeScript, and Tailwind CSS. Features a sleek design with smooth animations, mobile-first responsive design, and interactive navigation.
 
-First, run the development server:
+## ✨ Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+### 🚀 **Core Functionality**
+- **Responsive Design**: Mobile-first approach with desktop optimization
+- **Smooth Scrolling**: Automatic section navigation with header offset
+- **Interactive Navigation**: Active state tracking and visual feedback
+- **Mobile Menu**: Slide-out mobile navigation with smooth transitions
+- **Performance Optimized**: Responsive images and lazy loading
+
+### 🎯 **Navigation System**
+- **Sticky Header**: Fixed navigation that stays visible while scrolling
+- **Active Section Tracking**: Visual feedback showing current section
+- **Smooth Scrolling**: Animated navigation between sections
+- **Mobile & Desktop**: Optimized navigation for all screen sizes
+
+### 📱 **Responsive Design**
+- **Mobile-First**: Optimized for mobile devices
+- **Breakpoint System**: Responsive layouts using Tailwind CSS
+- **Touch-Friendly**: Mobile-optimized interactions and gestures
+- **Cross-Platform**: Consistent experience across all devices
+
+### 🖼️ **Image Optimization**
+- **Responsive Images**: Automatic image size selection based on screen width
+- **WebP Format**: Modern image format for better performance
+- **Lazy Loading**: Images load only when needed
+- **Multiple Sizes**: Small images for mobile, full-size for desktop
+
+## 🛠️ Tech Stack
+
+- **Framework**: Next.js 14 (App Router)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS
+- **UI Components**: Custom component library
+- **Icons**: SVG icons and custom graphics
+- **Images**: Next.js Image component with optimization
+- **Deployment**: Ready for Vercel, Netlify, or any hosting platform
+
+## 📁 Project Structure
+
+```
+creativo/
+├── src/
+│   ├── app/                    # Next.js app directory
+│   │   ├── globals.css        # Global styles
+│   │   ├── layout.tsx         # Root layout
+│   │   └── page.tsx           # Home page
+│   ├── components/            # React components
+│   │   ├── header/           # Header components
+│   │   │   ├── desktop-nav.tsx
+│   │   │   ├── mobile-menu-button.tsx
+│   │   │   ├── mobile-menu-overlay.tsx
+│   │   │   └── index.ts
+│   │   ├── hero-section.tsx   # Hero section
+│   │   ├── services-section.tsx # Services section
+│   │   ├── portfolio-section.tsx # Portfolio section
+│   │   ├── collaboration-section.tsx # Collaboration section
+│   │   ├── footer.tsx         # Footer
+│   │   └── ui/               # UI components
+│   │       ├── button.tsx     # Button component
+│   │       └── responsive-image.tsx # Responsive image component
+│   ├── constants/             # App constants
+│   │   └── index.ts          # Services, footer data, social media
+│   └── lib/                  # Utility functions
+│       └── utils.ts          # Helper functions
+├── public/                   # Static assets
+│   ├── images/              # Images and graphics
+│   │   ├── portfolio-*.webp # Portfolio images
+│   │   ├── portfolio-*-small.webp # Mobile portfolio images
+│   │   └── svg/             # SVG graphics
+│   └── icons/               # Icon assets
+├── package.json             # Dependencies and scripts
+├── tailwind.config.js       # Tailwind CSS configuration
+├── tsconfig.json            # TypeScript configuration
+└── README.md               # This file
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Getting Started
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### Prerequisites
+- Node.js 18+ 
+- npm, yarn, or pnpm
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### Installation
 
-## Learn More
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/PrayaaDIkk/creativo.git
+   cd creativo
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+2. **Install dependencies**
+   ```bash
+   npm install
+   # or
+   yarn install
+   # or
+   pnpm install
+   ```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. **Run the development server**
+   ```bash
+   npm run dev
+   # or
+   yarn dev
+   # or
+   pnpm dev
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+4. **Open your browser**
+   Navigate to [http://localhost:3000](http://localhost:3000)
 
-## Deploy on Vercel
+### Build for Production
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+```bash
+npm run build
+npm start
+```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## 🎨 Customization
+
+### Colors & Themes
+The project uses CSS custom properties for theming. Main colors are defined in Tailwind config:
+
+```css
+/* Primary theme colors */
+--blueTheme: #2563eb
+--grayTheme: #6b7280
+--light: #f8fafc
+```
+
+### Adding New Sections
+1. Create a new component in `src/components/`
+2. Add an `id` attribute to the section
+3. Update the navigation arrays in `src/constants/index.ts`
+4. Import and add to `src/app/page.tsx`
+
+### Responsive Images
+Use the `ResponsiveImage` component for automatic mobile/desktop image selection:
+
+```tsx
+import ResponsiveImage from "@/components/ui/responsive-image";
+
+<ResponsiveImage
+  src="/images/your-image.webp"
+  smallSrc="/images/your-image-small.webp"
+  alt="Description"
+  width={400}
+  height={300}
+/>
+```
+
+## 📱 Component Documentation
+
+### Header Component
+The header is modular and consists of several components:
+
+#### DesktopNav
+- **Props**: `scrollToSection`, `getMenuTextColor`
+- **Responsibility**: Desktop navigation menu with active states
+
+#### MobileMenuButton
+- **Props**: `isOpen`, `onClick`
+- **Responsibility**: Mobile hamburger menu toggle button
+
+#### MobileMenuOverlay
+- **Props**: `isOpen`, `onClose`, `onMenuClick`, `scrollToSection`, `getMenuTextColor`
+- **Responsibility**: Full mobile menu overlay with navigation
+
+### ResponsiveImage Component
+Automatically selects between small and regular images based on screen width:
+
+```tsx
+interface ResponsiveImageProps {
+  src: string;           // Desktop image path
+  smallSrc: string;      // Mobile image path
+  alt: string;           // Alt text
+  width: number;         // Image width
+  height: number;        // Image height
+  className?: string;    // Custom CSS classes
+  priority?: boolean;    // Loading priority
+  loading?: "lazy" | "eager";
+  sizes?: string;        // Responsive sizing hints
+}
+```
+
+## 🎯 Key Features Explained
+
+### Smooth Scrolling Navigation
+The navigation system automatically:
+- Calculates header height for proper offset
+- Provides smooth scrolling animation
+- Updates active section based on scroll position
+- Handles both mobile and desktop navigation
+
+### Mobile Menu System
+- **Slide Animation**: Smooth slide-in from right
+- **Backdrop**: Semi-transparent overlay
+- **Auto-Close**: Closes when menu items are clicked
+- **Responsive**: Adapts to different screen sizes
+
+### Active State Management
+- **Real-time Updates**: Active section updates as user scrolls
+- **Visual Feedback**: Active items show in blue theme color
+- **Consistent Styling**: Same logic for mobile and desktop
+
+## 🚀 Deployment
+
+### Vercel (Recommended)
+1. Connect your GitHub repository
+2. Vercel will automatically detect Next.js
+3. Deploy with zero configuration
+
+### Netlify
+1. Build command: `npm run build`
+2. Publish directory: `.next`
+3. Deploy with automatic builds
+
+### Other Platforms
+The project is compatible with any hosting platform that supports Node.js applications.
+
+## 📝 Scripts
+
+```json
+{
+  "dev": "next dev",           // Development server
+  "build": "next build",       // Production build
+  "start": "next start",       // Production server
+  "lint": "next lint"          // Code linting
+}
+```
+
+## 🤝 Contributing
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/amazing-feature`)
+3. Commit your changes (`git commit -m 'Add amazing feature'`)
+4. Push to the branch (`git push origin feature/amazing-feature`)
+5. Open a Pull Request
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## 👨‍💻 Author
+
+**Fadil Prayadika**
+- Website: [creativo.com](https://creativo.com)
+- Email: hello@creativo.com
+- Phone: +1-800-123 4567
+
+## 🙏 Acknowledgments
+
+- Next.js team for the amazing framework
+- Tailwind CSS for the utility-first CSS framework
+- The open-source community for inspiration and tools
+
+---
+
+**Creativo** - Where Design Meets Innovation! 🚀✨

@@ -5,6 +5,7 @@
 
 @theme {
     --color-blueTheme: #1f1f39;
+    --color-grayTheme: #6b7280;
 
     --font-inter: Inter, sans-serif;
 
@@ -136,5 +137,13 @@
 }
 
 @utility sec-p {
-    @apply py-24 px-7;
+    @apply px-7 py-24;
+}
+
+@utility sec-p-lg {
+    @apply p-16;
+}
+
+@utility max-container {
+    @apply mx-auto max-w-7xl;
 }

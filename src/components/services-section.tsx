@@ -11,18 +11,18 @@ const ServicesSection = () => {
     };
 
     return (
-        <section className="sec-p bg-black text-white">
-            <main className="flex flex-col gap-7">
-                <p className="text-xl">Our Services</p>
-                <div>
+        <section id="about" className="sec-p lg:sec-p-lg bg-black text-white">
+            <div className="max-container">
+                <main className="relative flex flex-col gap-7 lg:flex-row">
+                    <p className="text-xl lg:min-w-44 lg:py-2">Our Services</p>
                     <div>
                         {SERVICES.map((service, i) => (
                             <article className="space-y-6" key={i}>
                                 <div
-                                    className="flex justify-between items-start cursor-pointer"
+                                    className="flex cursor-pointer items-start justify-between"
                                     onClick={() => handleToggle(i)}
                                 >
-                                    <h1 className="font-medium text-3xl leading-12">
+                                    <h1 className="text-3xl leading-12 font-medium">
                                         {service.title}
                                     </h1>
                                     <figure
@@ -40,7 +40,7 @@ const ServicesSection = () => {
                                     </figure>
                                 </div>
                                 <div
-                                    className={`h-[1px] bg-white/50 mb-6 transition-colors duration-300 ${
+                                    className={`mb-6 h-[1px] bg-white/50 transition-colors duration-300 ${
                                         openIndex === i
                                             ? "bg-white/50"
                                             : "bg-white/30"
@@ -54,17 +54,17 @@ const ServicesSection = () => {
                                     }`}
                                 >
                                     <div className="space-y-6 py-2">
-                                        <p className="leading-8 text-white/70">
+                                        <p className="leading-8 text-white/70 lg:text-lg">
                                             {service.description}
                                         </p>
-                                        <div className="h-[1px] bg-white/50 mb-6"></div>
+                                        <div className="mb-6 h-[1px] bg-white/50"></div>
                                     </div>
                                 </div>
                             </article>
                         ))}
                     </div>
-                </div>
-            </main>
+                </main>
+            </div>
         </section>
     );
 };
